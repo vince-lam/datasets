@@ -1,0 +1,15 @@
+category,fraud_rate
+grocery_pos,0.01
+gas_transport,0.02
+shopping_pos,0.03
+home,0.04
+shopping_net,0.2
+kids_pets,0.04
+entertainment,0.18
+food_dining,0.12
+personal_care,0.1
+health_fitness,0.03
+misc_pos,0.06
+misc_net,0.25
+grocery_net,0.08
+travel,0.22
