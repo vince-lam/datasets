@@ -38,3 +38,22 @@ licence terms (HDB resale prices is under the Singapore Open Data Licence).
 
 The `_test.csv` files keep the target column so predictions can be scored against
 ground truth - drop it before inference.
+
+### CMLP programme datasets
+
+`data/cmlp-programme/` holds the datasets for the Certified Machine Learning
+Practitioner advanced training programme - two banking problems that fail in
+opposite ways. See the [directory README](data/cmlp-programme/README.md) for the
+split logic, the leakage columns and attribution.
+
+| File | Rows | Cols | Task | Target | Positive rate |
+|---|---:|---:|---|---|---:|
+| `baf_base_train_m0-5.csv` | 119,248 | 32 | classification | `fraud_bool` | 1.080% |
+| `baf_base_test_m6-7.csv` | 30,751 | 32 | classification | `fraud_bool` | 1.434% |
+| `lendingclub_leakage_demo.csv` | 38,577 | 41 | classification | `default_bool` | 14.59% |
+| `lendingclub_data_dictionary.xlsx` | - | - | reference | - | - |
+
+Bank Account Fraud is a time-ordered split (months 0-5 train, 6-7 test) so the
+drift is real. Lending Club ships ten post-outcome columns for the target
+leakage exercise. BAF is CC BY-NC-SA 4.0 (non-commercial) - see the directory
+README.
